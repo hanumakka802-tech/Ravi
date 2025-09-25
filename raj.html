@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    .couple {
+      font-size: 1.8em;
+      color: #d35400;
+      margin: 15px 0;
+    }
+
+    .details, .info {
+      color: #444;
+      margin: 10px 0;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f8b500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2e7d32;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    #message.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>You're Invited!</h1>
+    <div class="couple">Aarav ❤️ Meera</div>
+    <div class="details">
+      Together with their families,<br>
+      invite you to celebrate their wedding.
+    </div>
+    <div class="info">
+      <p><strong>Date:</strong> 15th December 2025</p>
+      <p><strong>Venue:</strong> The Grand Palace, Jaipur</p>
+    </div>
+    <button onclick="revealMessage()">Celebrate With Us 🎉</button>
+    <p id="message">We can’t wait to share this beautiful day with you!</p>
+  </div>
+
+  <script>
+    function revealMessage() {
+      document.getElementById("message").classList.add("visible");
+    }
+  </script>
+
+</body>
+</html>
